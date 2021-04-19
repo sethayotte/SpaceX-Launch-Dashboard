@@ -1,10 +1,12 @@
 import React from "react";
 import "./sass/App.scss";
 
+import LaunchDashboard from "./components/LaunchDashboard";
+
 const App = () => {
   return (
     <div>
-      <h1>Hello World</h1>
+      <LaunchDashboard />
     </div>
   );
 };
