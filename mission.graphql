@@ -1,0 +1,36 @@
+type Mission {
+  id: ID!
+  webcast: String
+  original: String
+  date_utc: String
+  rocket: String!
+  name: String!
+  location: Location
+    @materializer(
+      query: "location"
+      arguments: [{ name: "locality", field: "name" }]
+    )
+}
+
+type Image {
+  image: String
+}
+
+type Query {
+  getImage: [Image]
+    @rest(
+      endpoint: "https://api.spacexdata.com/v4/launches/past"
+      resultroot: "flickr.original[]"
+      configuration: "launchcode"
+    )
+  past: [Mission]
+    @rest(
+      endpoint: "https://api.spacexdata.com/v4/launches/past"
+      configuration: "launchcode"
+    )
+  next: [Mission]
+    @rest(
+      endpoint: "https://api.spacexdata.com/v4/launches/next"
+      configuration: "launchcode"
+    )
+}

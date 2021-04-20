@@ -1,0 +1,3 @@
+schema @sdl(files: ["mission.graphql", "launchLocation.graphql"]) {
+  query: Query
+}
