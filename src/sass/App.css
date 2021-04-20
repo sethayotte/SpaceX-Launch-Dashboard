@@ -86,6 +86,7 @@ p {
   font-weight: 400;
   font-size: 18pt;
   margin-top: 5px;
+  margin-bottom: 0px;
 }
 
 #header #backToTitle {
@@ -104,7 +105,7 @@ p {
 #missionContainers #pastMissions {
   background-color: #232323;
   border-radius: 20px;
-  width: 300px;
+  width: 350px;
   height: 85vh;
   margin-right: 35px;
 }
