@@ -17,9 +17,56 @@ p {
   color: white;
 }
 
+//Landing Page
+#landingLogo {
+  height: 10vw;
+  max-height: 100px;
+}
+
+#landingSubheading {
+  font-family: "IBM Plex Mono";
+  font-weight: 400;
+  font-size: 40pt;
+  margin-top: 25px;
+}
+
+#startArrow {
+  color: white;
+  font-size: 32pt;
+}
+
+#landingPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+#title {
+  margin-left: 100px;
+  margin-bottom: 50px;
+}
+
+@media only screen and (max-width: 700px) {
+  #landingSubheading {
+    font-size: 24pt;
+  }
+
+  #title {
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-bottom: 50px;
+  }
+}
+
+//Landing Dashboard
 #header {
   margin-top: 20px;
   margin-left: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
   img {
     height: 40px;
@@ -29,6 +76,13 @@ p {
     font-weight: 400;
     font-size: 18pt;
     margin-top: 5px;
+    margin-bottom: 0px;
+  }
+
+  #backToTitle {
+    color: white;
+    font-size: 22pt;
+    margin-right: 45px;
   }
 }
 
@@ -39,7 +93,7 @@ p {
   #pastMissions {
     background-color: #232323;
     border-radius: 20px;
-    width: 300px;
+    width: 350px;
     height: 85vh;
     margin-right: 35px;
 

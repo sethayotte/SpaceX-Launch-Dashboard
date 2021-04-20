@@ -1,13 +1,21 @@
 import React from "react";
 
 import SpaceXLogo from "../assets/spacex.svg";
+import { RiArrowGoBackLine } from "react-icons/ri";
 
 const LaunchDashboard = () => {
   return (
     <div id="dashboardPage">
       <div id="header">
-        <img src={SpaceXLogo} alt="SpaceX Logo" />
-        <h3>Launch Schedule</h3>
+        <div id="headerLeft">
+          <img src={SpaceXLogo} alt="SpaceX Logo" />
+          <h3>Launch Schedule</h3>
+        </div>
+        <div id="headerRight">
+          <a href="/">
+            <RiArrowGoBackLine id="backToTitle" />
+          </a>
+        </div>
       </div>
       <div id="missionContainers">
         <div id="pastMissions">
