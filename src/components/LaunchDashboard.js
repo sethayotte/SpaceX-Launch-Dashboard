@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { useQuery } from "@apollo/react-hooks";
 import { GET_LAUNCH_DATA } from "../queries/getLaunchData";
 
@@ -6,17 +6,17 @@ import SpaceXLogo from "../assets/spacex.svg";
 import { RiArrowGoBackLine } from "react-icons/ri";
 
 const LaunchDashboard = () => {
-  const {
-    data,
-    loading,
-    error 
-  } = useQuery(GET_LAUNCH_DATA)
-  const launchData = data?.getLaunchData
+  const { data, loading, error } = useQuery(GET_LAUNCH_DATA);
+  const launchData = data?.getLaunchData;
   useEffect(() => {
-    console.log(launchData)
-  })
-  if (loading) return <p>Loading...</p>
-  if (error) return <p>{error.message}</p> 
+    if (data) {
+      console.log(launchData);
+    }
+  }, [data]);
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>{error.message}</p>;
+  if (!data) return null;
+
   return (
     <div id="dashboardPage">
       <div id="header">
@@ -36,9 +36,7 @@ const LaunchDashboard = () => {
         </div>
         <div id="upcomingMission">
           <h1>Upcoming_Mission</h1>
-          <pre>
-            {JSON.stringify(launchData, null, " ")}
-          </pre>
+          <pre>{launchData ? launchData : "No Data"}</pre>
         </div>
       </div>
     </div>
