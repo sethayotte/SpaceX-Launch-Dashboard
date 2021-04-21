@@ -4,25 +4,33 @@ export const GET_LAUNCH_DATA = gql`
   query getLaunchData {
     next {
       name
-      date_utc
+      date_local
+      rocket
       rocketId {
+        id
         name
       }
+      launchpad
       location {
+        full_name
+        id
         locality
-        region
       }
       details
     }
     past {
       name
-      date_utc
+      date_local
+      rocket
       rocketId {
+        id
         name
       }
+      launchpad
       location {
+        full_name
+        id
         locality
-        region
       }
       details
     }

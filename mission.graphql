@@ -2,17 +2,15 @@ type Mission {
   id: ID!
   webcast: String
   original: String
-  date_utc: String
   rocket: String!
+  date_local: String
+  launchpad: String
   name: String!
   details: String
   patch: String
-  location: Location
-    @materializer(
-      query: "location"
-      arguments: [{ name: "locality", field: "name" }]
-    )
-  rocketId: Rocket
+  location: [Location]
+    @materializer(query: "location", arguments: [{ name: "id", field: "id" }])
+  rocketId: [Rocket]
     @materializer(query: "rocketId", arguments: [{ name: "id", field: "name" }])
 }
 
