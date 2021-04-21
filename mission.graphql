@@ -6,6 +6,7 @@ type Mission {
   rocket: String!
   name: String!
   details: String
+  patch: String
   location: Location
     @materializer(
       query: "location"
