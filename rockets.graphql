@@ -1,0 +1,17 @@
+type Rocket {
+  id: ID!
+  name: String
+}
+
+type Query {
+  rocketId(id: ID!): Rocket
+    @rest(
+      endpoint: "https://api.spacexdata.com/v4/rockets?name=$name;"
+      configuration: "launchcode"
+    )
+  launchchpads: [Location]
+    @rest(
+      endpoint: "https://api.spacexdata.com/v4/rockets"
+      configuration: "launchcode"
+    )
+}

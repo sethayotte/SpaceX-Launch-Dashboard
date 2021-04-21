@@ -5,11 +5,14 @@ type Mission {
   date_utc: String
   rocket: String!
   name: String!
+  details: String
   location: Location
     @materializer(
       query: "location"
       arguments: [{ name: "locality", field: "name" }]
     )
+  rocketId: Rocket
+    @materializer(query: "rocketId", arguments: [{ name: "id", field: "name" }])
 }
 
 type Image {
