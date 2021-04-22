@@ -17,6 +17,7 @@ export const GET_LAUNCH_DATA = gql`
         locality
       }
       details
+      id
     }
     past {
       name
@@ -33,6 +34,7 @@ export const GET_LAUNCH_DATA = gql`
         locality
       }
       details
+      id
     }
   }
 `;

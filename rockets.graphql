@@ -1,12 +1,12 @@
 type Rocket {
-  id: String
+  id: ID!
   name: String
 }
 
 type Query {
-  rocketId: [Rocket]
+  rocketId(id: ID!): Rocket
     @rest(
-      endpoint: "https://api.spacexdata.com/v4/rockets"
+      endpoint: "https://api.spacexdata.com/v4/rockets/$id"
       configuration: "launchcode"
     )
   launchchpads: [Location]

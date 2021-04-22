@@ -102,6 +102,42 @@ pre {
       font-family: "IBM Plex Mono";
       font-weight: 500;
       text-align: center;
+      margin-bottom: 35px;
+    }
+
+    #listItemContainer {
+      background-color: #343434;
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 0px;
+      margin: 5px 20px;
+
+      #listText {
+        h2 {
+          font-family: "IBM Plex Mono";
+          font-weight: 600;
+          text-align: left;
+          font-size: 16pt;
+          margin: 0px 0px 0px 25px;
+        }
+        h3 {
+          font-family: "IBM Plex Mono";
+          font-weight: 300;
+          font-style: italic;
+          text-align: left;
+          font-size: 12pt;
+          margin: 0px 0px 0px 25px;
+        }
+      }
+      #caratContainer {
+        #listCarat {
+          color: white;
+          font-size: 24pt;
+          margin-right: 15px;
+        }
+      }
     }
   }
 

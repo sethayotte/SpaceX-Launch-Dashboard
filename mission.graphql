@@ -2,9 +2,9 @@ type Mission {
   id: ID!
   webcast: String
   original: String
-  rocket: String!
+  rocket: ID!
   date_local: String
-  launchpad: String
+  launchpad: ID!
   name: String!
   details: String
   patch: String
@@ -13,8 +13,11 @@ type Mission {
       query: "location"
       arguments: [{ name: "id", field: "launchpad" }]
     )
-  rocketId: [Rocket]
-    @materializer(query: "rocketId", arguments: [{ name: "id", field: "name" }])
+  rocketId: Rocket
+    @materializer(
+      query: "rocketId"
+      arguments: [{ name: "id", field: "rocket" }]
+    )
 }
 
 type Image {
@@ -25,9 +28,7 @@ type Query {
   getImage(id: String!): [Image]
     @rest(
       endpoint: "https://api.spacexdata.com/v4/launches/$id;?limit=1"
-      setters: [
-        { field: "image", path: "links.flickr.original[]" }
-        ]
+      setters: [{ field: "image", path: "links.flickr.original[]" }]
     )
   mission(id: String!): Mission
     @rest(

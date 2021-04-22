@@ -1,3 +1,6 @@
-schema @sdl(files: ["mission.graphql", "launchLocation.graphql", "rockets.graphql"]) {
+schema
+  @sdl(
+    files: ["mission.graphql", "launchLocation.graphql", "rockets.graphql"]
+  ) {
   query: Query
 }
