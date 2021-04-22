@@ -22,20 +22,26 @@ type Image {
 }
 
 type Query {
-  getImage: [Image]
+  getImage(id: String!): [Image]
     @rest(
-      endpoint: "https://api.spacexdata.com/v4/launches/past"
-      resultroot: "flickr.original[]"
-      configuration: "launchcode"
+      endpoint: "https://api.spacexdata.com/v4/launches/$id;?limit=1"
+      setters: [
+        { field: "image", path: "links.flickr.original[]" }
+        ]
     )
-  past: [Mission]
+  mission(id: String!): Mission
     @rest(
-      endpoint: "https://api.spacexdata.com/v4/launches/past"
-      configuration: "launchcode"
+      endpoint: "https://api.spacexdata.com/v4/launches/$id;?limit=1"
+      setters: [{ field: "webcast", path: "links.webcast" }]
     )
   next: [Mission]
     @rest(
       endpoint: "https://api.spacexdata.com/v4/launches/next"
+      setters: [{ field: "webcast", path: "links.webcast" }]
+    )
+  past: [Mission]
+    @rest(
+      endpoint: "https://api.spacexdata.com/v4/launches/past"
       configuration: "launchcode"
     )
 }
