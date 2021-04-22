@@ -106,9 +106,11 @@ pre {
 #missionContainers #pastMissions {
   background-color: #232323;
   border-radius: 20px;
-  width: 350px;
+  width: 375px;
   height: 85vh;
   margin-right: 35px;
+  overflow: scroll;
+  overflow-x: hidden;
 }
 
 #missionContainers #pastMissions h2 {
@@ -118,7 +120,7 @@ pre {
   margin-bottom: 35px;
 }
 
-#missionContainers #pastMissions #listItemContainer {
+#missionContainers #pastMissions #listItemLink {
   background-color: #343434;
   border-radius: 15px;
   display: -webkit-box;
@@ -131,10 +133,10 @@ pre {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 15px 0px;
-  margin: 5px 20px;
+  margin: 10px 20px;
 }
 
-#missionContainers #pastMissions #listItemContainer #listText h2 {
+#missionContainers #pastMissions #listItemLink #listText h2 {
   font-family: "IBM Plex Mono";
   font-weight: 600;
   text-align: left;
@@ -142,7 +144,7 @@ pre {
   margin: 0px 0px 0px 25px;
 }
 
-#missionContainers #pastMissions #listItemContainer #listText h3 {
+#missionContainers #pastMissions #listItemLink #listText h3 {
   font-family: "IBM Plex Mono";
   font-weight: 300;
   font-style: italic;
@@ -151,17 +153,21 @@ pre {
   margin: 0px 0px 0px 25px;
 }
 
-#missionContainers #pastMissions #listItemContainer #caratContainer #listCarat {
+#missionContainers #pastMissions #listItemLink #caratContainer #listCarat {
   color: white;
   font-size: 24pt;
   margin-right: 15px;
+}
+
+#missionContainers #pastMissions::-webkit-scrollbar {
+  display: none;
 }
 
 #missionContainers #upcomingMission {
   background-color: #232323;
   border-radius: 20px;
   width: 60vw;
-  max-width: 900px;
+  max-width: 1000px;
   height: 85vh;
   padding-right: 45px;
 }
@@ -187,7 +193,7 @@ pre {
 }
 
 #missionContainers #upcomingMission #blockOne #imageContainer {
-  width: 60%;
+  width: 55%;
   margin-right: 20px;
 }
 
@@ -198,7 +204,7 @@ pre {
 }
 
 #missionContainers #upcomingMission #blockOne #mainStats {
-  width: 40%;
+  width: 45%;
   margin-right: 35px;
   margin-left: 25px;
 }
@@ -215,7 +221,7 @@ pre {
 #missionContainers #upcomingMission #blockOne #mainStats .statFigure {
   font-family: "IBM Plex Mono";
   font-weight: 400;
-  font-size: 20pt;
+  font-size: 18pt;
   color: white;
   margin-top: 0px;
   margin-bottom: 5px;
@@ -242,7 +248,7 @@ pre {
 #missionContainers #upcomingMission #blockTwo .detailsBody {
   font-family: "IBM Plex Mono";
   font-weight: 400;
-  font-size: 14pt;
+  font-size: 12pt;
   color: white;
   margin-top: 0px;
   margin-bottom: 5px;
@@ -308,5 +314,143 @@ pre {
     width: 90vw;
     max-width: 600px;
   }
+}
+
+#pastMissionContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 35px;
+}
+
+#pastMissionContainer #upcomingMission {
+  background-color: #232323;
+  border-radius: 20px;
+  width: 60vw;
+  max-width: 1000px;
+  height: 85vh;
+  padding-right: 45px;
+}
+
+#pastMissionContainer #upcomingMission h1 {
+  font-family: "IBM Plex Mono";
+  font-weight: 500;
+  padding-left: 55px;
+  padding-top: 20px;
+  padding-bottom: 35px;
+}
+
+#pastMissionContainer #upcomingMission #blockOne {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+#pastMissionContainer #upcomingMission #blockOne #imageContainer {
+  width: 55%;
+  margin-right: 20px;
+}
+
+#pastMissionContainer #upcomingMission #blockOne #imageContainer #missionImage {
+  width: 90%;
+  margin-left: 55px;
+  border-radius: 15px;
+}
+
+#pastMissionContainer #upcomingMission #blockOne #mainStats {
+  width: 45%;
+  margin-right: 35px;
+  margin-left: 25px;
+}
+
+#pastMissionContainer #upcomingMission #blockOne #mainStats .statHeading {
+  font-family: "IBM Plex Mono";
+  font-weight: 600;
+  font-size: 12pt;
+  color: #646363;
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+
+#pastMissionContainer #upcomingMission #blockOne #mainStats .statFigure {
+  font-family: "IBM Plex Mono";
+  font-weight: 400;
+  font-size: 18pt;
+  color: white;
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
+
+#pastMissionContainer #upcomingMission #blockOne h4 {
+  text-align: left;
+}
+
+#pastMissionContainer #upcomingMission #blockTwo {
+  margin-left: 55px;
+  margin-top: 25px;
+}
+
+#pastMissionContainer #upcomingMission #blockTwo .detailsHeading {
+  font-family: "IBM Plex Mono";
+  font-weight: 600;
+  font-size: 12pt;
+  color: #646363;
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+
+#pastMissionContainer #upcomingMission #blockTwo .detailsBody {
+  font-family: "IBM Plex Mono";
+  font-weight: 400;
+  font-size: 12pt;
+  color: white;
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
+
+#pastMissionContainer #upcomingMission #blockTwo #buttonContainer {
+  margin-top: 50px;
+}
+
+#pastMissionContainer #upcomingMission #blockTwo #buttonContainer #watchLiveButton {
+  border-radius: 10px;
+  background-color: #232323;
+  width: 200px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-shadow: 0px 0px 0px 1px #fff inset;
+          box-shadow: 0px 0px 0px 1px #fff inset;
+}
+
+#pastMissionContainer #upcomingMission #blockTwo #buttonContainer #watchLiveButton p {
+  font-family: "IBM Plex Mono";
+  font-weight: 500;
+  font-size: 14pt;
+}
+
+#pastMissionContainer #upcomingMission #blockTwo #buttonContainer #watchLiveButton:hover {
+  background-color: white;
+}
+
+#pastMissionContainer #upcomingMission #blockTwo #buttonContainer #watchLiveButton:hover p {
+  color: #232323;
+  font-weight: 700;
 }
 /*# sourceMappingURL=App.css.map */

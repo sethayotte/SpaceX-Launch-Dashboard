@@ -7,6 +7,7 @@ import { client } from "./utils/client";
 
 import Landing from "./components/Landing";
 import LaunchDashboard from "./components/LaunchDashboard";
+import PastMissionModal from "./components/PastMissionModal";
 
 const App = () => {
   return (
@@ -14,12 +15,9 @@ const App = () => {
       <Router>
         <ApolloProvider client={client}>
           <Switch>
-            <Route path="/launch-dashboard">
-              <LaunchDashboard />
-            </Route>
-            <Route path="/">
-              <Landing />
-            </Route>
+            <Route path="/launch-dashboard" component={LaunchDashboard} />
+            <Route path="/missions/:missionId" component={PastMissionModal} />
+            <Route path="/" component={Landing} />
           </Switch>
         </ApolloProvider>
       </Router>

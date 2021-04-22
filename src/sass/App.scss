@@ -94,9 +94,11 @@ pre {
   #pastMissions {
     background-color: #232323;
     border-radius: 20px;
-    width: 350px;
+    width: 375px;
     height: 85vh;
     margin-right: 35px;
+    overflow: scroll;
+    overflow-x: hidden;
 
     h2 {
       font-family: "IBM Plex Mono";
@@ -105,14 +107,14 @@ pre {
       margin-bottom: 35px;
     }
 
-    #listItemContainer {
+    #listItemLink {
       background-color: #343434;
       border-radius: 15px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding: 15px 0px;
-      margin: 5px 20px;
+      margin: 10px 20px;
 
       #listText {
         h2 {
@@ -141,11 +143,15 @@ pre {
     }
   }
 
+  #pastMissions::-webkit-scrollbar {
+    display: none;
+  }
+
   #upcomingMission {
     background-color: #232323;
     border-radius: 20px;
     width: 60vw;
-    max-width: 900px;
+    max-width: 1000px;
     height: 85vh;
     padding-right: 45px;
 
@@ -163,7 +169,7 @@ pre {
       justify-content: flex-start;
 
       #imageContainer {
-        width: 60%;
+        width: 55%;
         margin-right: 20px;
         #missionImage {
           width: 90%;
@@ -173,7 +179,7 @@ pre {
       }
 
       #mainStats {
-        width: 40%;
+        width: 45%;
         margin-right: 35px;
         margin-left: 25px;
 
@@ -189,7 +195,7 @@ pre {
         .statFigure {
           font-family: "IBM Plex Mono";
           font-weight: 400;
-          font-size: 20pt;
+          font-size: 18pt;
           color: white;
           margin-top: 0px;
           margin-bottom: 5px;
@@ -216,7 +222,7 @@ pre {
       .detailsBody {
         font-family: "IBM Plex Mono";
         font-weight: 400;
-        font-size: 14pt;
+        font-size: 12pt;
         color: white;
         margin-top: 0px;
         margin-bottom: 5px;
@@ -271,6 +277,126 @@ pre {
     #upcomingMission {
       width: 90vw;
       max-width: 600px;
+    }
+  }
+}
+
+// Past Mission Specific Modal
+#pastMissionContainer {
+  display: flex;
+  justify-content: center;
+  margin: 35px;
+
+  #upcomingMission {
+    background-color: #232323;
+    border-radius: 20px;
+    width: 60vw;
+    max-width: 1000px;
+    height: 85vh;
+    padding-right: 45px;
+
+    h1 {
+      font-family: "IBM Plex Mono";
+      font-weight: 500;
+      padding-left: 55px;
+      padding-top: 20px;
+      padding-bottom: 35px;
+    }
+
+    #blockOne {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+
+      #imageContainer {
+        width: 55%;
+        margin-right: 20px;
+        #missionImage {
+          width: 90%;
+          margin-left: 55px;
+          border-radius: 15px;
+        }
+      }
+
+      #mainStats {
+        width: 45%;
+        margin-right: 35px;
+        margin-left: 25px;
+
+        .statHeading {
+          font-family: "IBM Plex Mono";
+          font-weight: 600;
+          font-size: 12pt;
+          color: #646363;
+          margin-bottom: 5px;
+          margin-top: 10px;
+        }
+
+        .statFigure {
+          font-family: "IBM Plex Mono";
+          font-weight: 400;
+          font-size: 18pt;
+          color: white;
+          margin-top: 0px;
+          margin-bottom: 5px;
+        }
+      }
+
+      h4 {
+        text-align: left;
+      }
+    }
+
+    #blockTwo {
+      margin-left: 55px;
+      margin-top: 25px;
+      .detailsHeading {
+        font-family: "IBM Plex Mono";
+        font-weight: 600;
+        font-size: 12pt;
+        color: #646363;
+        margin-bottom: 5px;
+        margin-top: 10px;
+      }
+
+      .detailsBody {
+        font-family: "IBM Plex Mono";
+        font-weight: 400;
+        font-size: 12pt;
+        color: white;
+        margin-top: 0px;
+        margin-bottom: 5px;
+      }
+
+      #buttonContainer {
+        margin-top: 50px;
+
+        #watchLiveButton {
+          border-radius: 10px;
+          background-color: #232323;
+          width: 200px;
+          height: 50px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          box-shadow: 0px 0px 0px 1px #fff inset;
+
+          p {
+            font-family: "IBM Plex Mono";
+            font-weight: 500;
+            font-size: 14pt;
+          }
+        }
+
+        #watchLiveButton:hover {
+          background-color: white;
+
+          p {
+            color: #232323;
+            font-weight: 700;
+          }
+        }
+      }
     }
   }
 }

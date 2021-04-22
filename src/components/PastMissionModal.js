@@ -4,9 +4,8 @@ import { GET_LAUNCH_DATA } from "../queries/getLaunchData";
 
 import SpaceXLogo from "../assets/spacex.svg";
 import MissionImgPlaceholder from "../assets/960x0.jpeg";
-import { RiArrowGoBackLine } from "react-icons/ri";
+import { RiCloseCircleFill } from "react-icons/ri";
 import { SolarSystemLoading } from "react-loadingg";
-import { PanelData } from "./PastListItems";
 
 const LaunchDashboard = () => {
   const { data, loading, error } = useQuery(GET_LAUNCH_DATA);
@@ -27,20 +26,14 @@ const LaunchDashboard = () => {
           <h3>Launch Schedule</h3>
         </div>
         <div id="headerRight">
-          <a href="/">
-            <RiArrowGoBackLine id="backToTitle" />
+          <a href="/launch-dashboard">
+            <RiCloseCircleFill id="backToTitle" />
           </a>
         </div>
       </div>
-      <div id="missionContainers">
-        <div id="pastMissions">
-          <h2>Past_Missions</h2>
-          <div id="listItemsContainer">
-            <PanelData />
-          </div>
-        </div>
+      <div id="pastMissionContainer">
         <div id="upcomingMission">
-          <h1>Upcoming_Mission</h1>
+          <h1>Mission_{}</h1>
           {/* <pre>{JSON.stringify(data, null, "  ")}</pre> */}
           <div id="blockOne">
             <div id="imageContainer">
