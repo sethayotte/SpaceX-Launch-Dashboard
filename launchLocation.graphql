@@ -7,9 +7,9 @@ type Location {
 }
 
 type Query {
-  location(id: String!): [Location]
+  location(id: String!): Location
     @rest(
-      endpoint: "https://api.spacexdata.com/v4/launchpads"
+      endpoint: "https://api.spacexdata.com/v4/launchpads/$id"
       configuration: "launchcode"
     )
   launchpads: [Location]

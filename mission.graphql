@@ -8,8 +8,11 @@ type Mission {
   name: String!
   details: String
   patch: String
-  location: [Location]
-    @materializer(query: "location", arguments: [{ name: "id", field: "id" }])
+  location: Location
+    @materializer(
+      query: "location"
+      arguments: [{ name: "id", field: "launchpad" }]
+    )
   rocketId: [Rocket]
     @materializer(query: "rocketId", arguments: [{ name: "id", field: "name" }])
 }
