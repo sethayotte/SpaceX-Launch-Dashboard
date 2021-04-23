@@ -90,6 +90,10 @@ pre {
   margin-bottom: 0px;
 }
 
+#header #homeLink {
+  text-decoration: none;
+}
+
 #header #backToTitle {
   color: white;
   font-size: 22pt;
@@ -234,6 +238,16 @@ pre {
 #missionContainers #upcomingMission #blockTwo {
   margin-left: 55px;
   margin-top: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #missionContainers #upcomingMission #blockTwo .detailsHeading {
@@ -311,8 +325,42 @@ pre {
     max-width: 600px;
   }
   #missionContainers #upcomingMission {
-    width: 90vw;
+    margin-top: 35px;
+    margin-right: 0px;
+    padding-bottom: 55px;
+    width: 80vw;
+    height: auto;
     max-width: 600px;
+  }
+  #missionContainers #upcomingMission #blockOne {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  #missionContainers #upcomingMission #blockOne #imageContainer {
+    width: auto;
+    margin-bottom: 25px;
+    padding-left: 0px;
+  }
+  #missionContainers #upcomingMission #blockOne #mainStats {
+    width: auto;
+    margin-right: 35px;
+    margin-left: 45px;
+  }
+  #missionContainers #upcomingMission #blockTwo {
+    width: 80%;
+    margin-right: 35px;
+    margin-left: 45px;
   }
 }
 
@@ -330,7 +378,8 @@ pre {
   background-color: #232323;
   border-radius: 20px;
   max-width: 1000px;
-  height: 85vh;
+  margin-top: 30px;
+  padding-bottom: 75px;
   padding-right: 25px;
 }
 
@@ -339,7 +388,7 @@ pre {
   font-weight: 500;
   padding-left: 55px;
   padding-top: 20px;
-  padding-bottom: 35px;
+  padding-bottom: 15px;
 }
 
 #pastMissionContainer #upcomingMission #blockOne {
@@ -395,7 +444,18 @@ pre {
 
 #pastMissionContainer #upcomingMission #blockTwo {
   margin-left: 55px;
+  margin-right: 55px;
   margin-top: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #pastMissionContainer #upcomingMission #blockTwo .detailsHeading {
@@ -418,6 +478,10 @@ pre {
 
 #pastMissionContainer #upcomingMission #blockTwo #buttonContainer {
   margin-top: 50px;
+}
+
+#pastMissionContainer #upcomingMission #blockTwo #buttonContainer a {
+  text-decoration: none;
 }
 
 #pastMissionContainer #upcomingMission #blockTwo #buttonContainer #watchLiveButton {
@@ -451,5 +515,38 @@ pre {
 #pastMissionContainer #upcomingMission #blockTwo #buttonContainer #watchLiveButton:hover p {
   color: #232323;
   font-weight: 700;
+}
+
+@media only screen and (max-width: 1000px) {
+  #pastMissionContainer #upcomingMission #blockOne {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  #pastMissionContainer #upcomingMission #blockOne #imageContainer {
+    width: auto;
+    margin-bottom: 25px;
+    padding-left: 0px;
+  }
+  #pastMissionContainer #upcomingMission #blockOne #mainStats {
+    width: auto;
+    margin-right: 35px;
+    margin-left: 45px;
+  }
+  #pastMissionContainer #upcomingMission #blockTwo {
+    width: 80%;
+    margin-right: 35px;
+    margin-left: 45px;
+  }
 }
 /*# sourceMappingURL=App.css.map */

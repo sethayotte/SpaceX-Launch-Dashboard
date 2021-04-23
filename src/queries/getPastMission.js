@@ -1,7 +1,7 @@
 import { gql } from "apollo-boost";
 
 export const GET_PAST_MISSION = gql`
-  query MyQuery {
+  query MyQuery($missionId: String!) {
     mission(id: $missionId) {
       id
       date_local

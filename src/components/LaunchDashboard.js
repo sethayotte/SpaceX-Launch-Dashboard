@@ -23,8 +23,10 @@ const LaunchDashboard = () => {
     <div id="dashboardPage">
       <div id="header">
         <div id="headerLeft">
-          <img src={SpaceXLogo} alt="SpaceX Logo" />
-          <h3>Launch Schedule</h3>
+          <a href="/" id="homeLink">
+            <img src={SpaceXLogo} alt="SpaceX Logo" />
+            <h3>Launch Schedule</h3>
+          </a>
         </div>
         <div id="headerRight">
           <a href="/">

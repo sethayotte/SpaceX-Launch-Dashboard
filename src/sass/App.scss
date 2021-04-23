@@ -80,6 +80,10 @@ pre {
     margin-bottom: 0px;
   }
 
+  #homeLink {
+    text-decoration: none;
+  }
+
   #backToTitle {
     color: white;
     font-size: 22pt;
@@ -210,6 +214,9 @@ pre {
     #blockTwo {
       margin-left: 55px;
       margin-top: 25px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       .detailsHeading {
         font-family: "IBM Plex Mono";
         font-weight: 600;
@@ -275,8 +282,36 @@ pre {
     }
 
     #upcomingMission {
-      width: 90vw;
+      margin-top: 35px;
+      margin-right: 0px;
+      padding-bottom: 55px;
+      width: 80vw;
+      height: auto;
       max-width: 600px;
+      #blockOne {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+
+        #imageContainer {
+          width: auto;
+          margin-bottom: 25px;
+          padding-left: 0px;
+        }
+
+        #mainStats {
+          width: auto;
+          margin-right: 35px;
+          margin-left: 45px;
+        }
+      }
+
+      #blockTwo {
+        width: 80%;
+        margin-right: 35px;
+        margin-left: 45px;
+      }
     }
   }
 }
@@ -291,7 +326,8 @@ pre {
     background-color: #232323;
     border-radius: 20px;
     max-width: 1000px;
-    height: 85vh;
+    margin-top: 30px;
+    padding-bottom: 75px;
     padding-right: 25px;
 
     h1 {
@@ -299,7 +335,7 @@ pre {
       font-weight: 500;
       padding-left: 55px;
       padding-top: 20px;
-      padding-bottom: 35px;
+      padding-bottom: 15px;
     }
 
     #blockOne {
@@ -348,7 +384,11 @@ pre {
 
     #blockTwo {
       margin-left: 55px;
+      margin-right: 55px;
       margin-top: 25px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       .detailsHeading {
         font-family: "IBM Plex Mono";
         font-weight: 600;
@@ -369,6 +409,10 @@ pre {
 
       #buttonContainer {
         margin-top: 50px;
+
+        a {
+          text-decoration: none;
+        }
 
         #watchLiveButton {
           border-radius: 10px;
@@ -395,6 +439,37 @@ pre {
             font-weight: 700;
           }
         }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  #pastMissionContainer {
+    #upcomingMission {
+      #blockOne {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+
+        #imageContainer {
+          width: auto;
+          margin-bottom: 25px;
+          padding-left: 0px;
+        }
+
+        #mainStats {
+          width: auto;
+          margin-right: 35px;
+          margin-left: 45px;
+        }
+      }
+
+      #blockTwo {
+        width: 80%;
+        margin-right: 35px;
+        margin-left: 45px;
       }
     }
   }
