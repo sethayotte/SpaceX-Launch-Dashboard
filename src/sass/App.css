@@ -20,7 +20,7 @@ pre {
 }
 
 #landingSubheading {
-  font-family: "IBM Plex Mono";
+  font-family: "IBM Plex Mono", monospace;
   font-weight: 400;
   font-size: 40pt;
   margin-top: 25px;
@@ -89,7 +89,7 @@ pre {
 }
 
 #header h3 {
-  font-family: "IBM Plex Mono";
+  font-family: "IBM Plex Mono", monospace;
   font-weight: 400;
   font-size: 18pt;
   margin-top: 5px;
@@ -127,7 +127,7 @@ pre {
 }
 
 #missionContainers #pastMissions h2 {
-  font-family: "IBM Plex Mono";
+  font-family: "IBM Plex Mono", monospace;
   font-weight: 500;
   text-align: center;
   margin-bottom: 35px;
@@ -150,7 +150,7 @@ pre {
 }
 
 #missionContainers #pastMissions #listItemLink #listText h2 {
-  font-family: "IBM Plex Mono";
+  font-family: "IBM Plex Mono", monospace;
   font-weight: 600;
   text-align: left;
   font-size: 16pt;
@@ -158,7 +158,7 @@ pre {
 }
 
 #missionContainers #pastMissions #listItemLink #listText h3 {
-  font-family: "IBM Plex Mono";
+  font-family: "IBM Plex Mono", monospace;
   font-weight: 300;
   font-style: italic;
   text-align: left;
@@ -187,7 +187,7 @@ pre {
 }
 
 #missionContainers #upcomingMission h1 {
-  font-family: "IBM Plex Mono";
+  font-family: "IBM Plex Mono", monospace;
   font-weight: 500;
   padding-left: 55px;
   padding-top: 20px;
@@ -224,7 +224,7 @@ pre {
 }
 
 #missionContainers #upcomingMission #blockOne #mainStats .statHeading {
-  font-family: "IBM Plex Mono";
+  font-family: "IBM Plex Mono", monospace;
   font-weight: 600;
   font-size: 12pt;
   color: #646363;
@@ -233,7 +233,7 @@ pre {
 }
 
 #missionContainers #upcomingMission #blockOne #mainStats .statFigure {
-  font-family: "IBM Plex Mono";
+  font-family: "IBM Plex Mono", monospace;
   font-weight: 400;
   font-size: 18pt;
   color: white;
@@ -261,7 +261,7 @@ pre {
 }
 
 #missionContainers #upcomingMission #blockTwo .detailsHeading {
-  font-family: "IBM Plex Mono";
+  font-family: "IBM Plex Mono", monospace;
   font-weight: 600;
   font-size: 12pt;
   color: #646363;
@@ -270,7 +270,7 @@ pre {
 }
 
 #missionContainers #upcomingMission #blockTwo .detailsBody {
-  font-family: "IBM Plex Mono";
+  font-family: "IBM Plex Mono", monospace;
   font-weight: 400;
   font-size: 12pt;
   color: white;
@@ -301,7 +301,7 @@ pre {
 }
 
 #missionContainers #upcomingMission #blockTwo #buttonContainer #watchLiveButton p {
-  font-family: "IBM Plex Mono";
+  font-family: "IBM Plex Mono", monospace;
   font-weight: 500;
   font-size: 14pt;
 }
@@ -400,7 +400,7 @@ pre {
     height: 28px;
   }
   #header h3 {
-    font-family: "IBM Plex Mono";
+    font-family: "IBM Plex Mono", monospace;
     font-weight: 400;
     font-size: 12pt;
     margin-top: 5px;
@@ -507,7 +507,7 @@ pre {
 }
 
 #pastMissionContainer #upcomingMission h1 {
-  font-family: "IBM Plex Mono";
+  font-family: "IBM Plex Mono", monospace;
   font-weight: 500;
   padding-left: 55px;
   padding-top: 20px;
@@ -544,7 +544,7 @@ pre {
 }
 
 #pastMissionContainer #upcomingMission #blockOne #mainStats .statHeading {
-  font-family: "IBM Plex Mono";
+  font-family: "IBM Plex Mono", monospace;
   font-weight: 600;
   font-size: 12pt;
   color: #646363;
@@ -553,7 +553,7 @@ pre {
 }
 
 #pastMissionContainer #upcomingMission #blockOne #mainStats .statFigure {
-  font-family: "IBM Plex Mono";
+  font-family: "IBM Plex Mono", monospace;
   font-weight: 400;
   font-size: 18pt;
   color: white;
@@ -582,7 +582,7 @@ pre {
 }
 
 #pastMissionContainer #upcomingMission #blockTwo .detailsHeading {
-  font-family: "IBM Plex Mono";
+  font-family: "IBM Plex Mono", monospace;
   font-weight: 600;
   font-size: 12pt;
   color: #646363;
@@ -591,7 +591,7 @@ pre {
 }
 
 #pastMissionContainer #upcomingMission #blockTwo .detailsBody {
-  font-family: "IBM Plex Mono";
+  font-family: "IBM Plex Mono", monospace;
   font-weight: 400;
   font-size: 12pt;
   color: white;
@@ -626,7 +626,7 @@ pre {
 }
 
 #pastMissionContainer #upcomingMission #blockTwo #buttonContainer #watchLiveButton p {
-  font-family: "IBM Plex Mono";
+  font-family: "IBM Plex Mono", monospace;
   font-weight: 500;
   font-size: 14pt;
 }
