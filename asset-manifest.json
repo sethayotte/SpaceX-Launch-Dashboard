@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/SpaceX-Launch-Dashboard/static/css/main.9bf7b422.chunk.css",
-    "main.js": "/SpaceX-Launch-Dashboard/static/js/main.8f958b7b.chunk.js",
-    "main.js.map": "/SpaceX-Launch-Dashboard/static/js/main.8f958b7b.chunk.js.map",
+    "main.js": "/SpaceX-Launch-Dashboard/static/js/main.a9a1a682.chunk.js",
+    "main.js.map": "/SpaceX-Launch-Dashboard/static/js/main.a9a1a682.chunk.js.map",
     "runtime-main.js": "/SpaceX-Launch-Dashboard/static/js/runtime-main.d0fba8cb.js",
     "runtime-main.js.map": "/SpaceX-Launch-Dashboard/static/js/runtime-main.d0fba8cb.js.map",
     "static/js/2.66f36648.chunk.js": "/SpaceX-Launch-Dashboard/static/js/2.66f36648.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.d0fba8cb.js",
     "static/js/2.66f36648.chunk.js",
     "static/css/main.9bf7b422.chunk.css",
-    "static/js/main.8f958b7b.chunk.js"
+    "static/js/main.a9a1a682.chunk.js"
   ]
 }
