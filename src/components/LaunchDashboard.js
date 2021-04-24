@@ -43,7 +43,6 @@ const LaunchDashboard = () => {
         </div>
         <div id="upcomingMission">
           <h1>Upcoming_Mission</h1>
-          {/* <pre>{JSON.stringify(data, null, "  ")}</pre> */}
           <div id="blockOne">
             <div id="imageContainer">
               <img

@@ -64,6 +64,12 @@ pre {
   }
 }
 
+#dashboardPage {
+  margin: 0px;
+  padding: 0px;
+  width: 100vw;
+}
+
 #header {
   margin-top: 20px;
   margin-left: 45px;
@@ -105,6 +111,9 @@ pre {
   display: -ms-flexbox;
   display: flex;
   margin: 35px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 #missionContainers #pastMissions {
@@ -172,8 +181,9 @@ pre {
   border-radius: 20px;
   width: 60vw;
   max-width: 1000px;
-  height: 85vh;
+  height: auto;
   padding-right: 45px;
+  padding-bottom: 75px;
 }
 
 #missionContainers #upcomingMission h1 {
@@ -305,7 +315,7 @@ pre {
   font-weight: 700;
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1200px) {
   #missionContainers {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -321,16 +331,19 @@ pre {
   #missionContainers #pastMissions {
     margin-top: 35px;
     margin-right: 0px;
-    width: 90vw;
-    max-width: 600px;
+    width: 75vw;
   }
   #missionContainers #upcomingMission {
     margin-top: 35px;
     margin-right: 0px;
     padding-bottom: 55px;
-    width: 80vw;
+    width: 70vw;
     height: auto;
-    max-width: 600px;
+  }
+  #missionContainers #upcomingMission h1 {
+    font-size: 18pt;
+    text-align: center;
+    padding: 10px;
   }
   #missionContainers #upcomingMission #blockOne {
     display: -webkit-box;
@@ -358,6 +371,116 @@ pre {
     margin-left: 45px;
   }
   #missionContainers #upcomingMission #blockTwo {
+    width: 80%;
+    margin-right: 35px;
+    margin-left: 45px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  #header {
+    margin-top: 20px;
+    margin-left: 45px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  #header img {
+    height: 28px;
+  }
+  #header h3 {
+    font-family: "IBM Plex Mono";
+    font-weight: 400;
+    font-size: 12pt;
+    margin-top: 5px;
+    margin-bottom: 0px;
+  }
+  #header #homeLink {
+    text-decoration: none;
+  }
+  #header #backToTitle {
+    color: white;
+    font-size: 22pt;
+    margin-right: 45px;
+  }
+  #missionContainers,
+  #pastMissionContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #missionContainers #pastMissions,
+  #pastMissionContainer #pastMissions {
+    margin-top: 35px;
+    margin-right: 0px;
+    width: 95vw;
+  }
+  #missionContainers #upcomingMission,
+  #pastMissionContainer #upcomingMission {
+    margin-top: 15px;
+    margin-right: 0px;
+    padding-bottom: 55px;
+    width: 85vw;
+    height: auto;
+  }
+  #missionContainers #upcomingMission h1,
+  #pastMissionContainer #upcomingMission h1 {
+    font-size: 18pt;
+    text-align: center;
+    padding: 10px;
+  }
+  #missionContainers #upcomingMission #blockOne,
+  #pastMissionContainer #upcomingMission #blockOne {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  #missionContainers #upcomingMission #blockOne #imageContainer,
+  #pastMissionContainer #upcomingMission #blockOne #imageContainer {
+    width: auto;
+    margin-bottom: 25px;
+    padding-left: 0px;
+  }
+  #missionContainers #upcomingMission #blockOne #mainStats,
+  #pastMissionContainer #upcomingMission #blockOne #mainStats {
+    width: auto;
+    margin-right: 35px;
+    margin-left: 45px;
+  }
+  #missionContainers #upcomingMission #blockOne #mainStats .statFigure,
+  #pastMissionContainer #upcomingMission #blockOne #mainStats .statFigure {
+    font-size: 14pt;
+  }
+  #missionContainers #upcomingMission #blockTwo,
+  #pastMissionContainer #upcomingMission #blockTwo {
     width: 80%;
     margin-right: 35px;
     margin-left: 45px;
@@ -547,6 +670,20 @@ pre {
     width: 80%;
     margin-right: 35px;
     margin-left: 45px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  #pastMissionContainer #upcomingMission #blockOne #imageContainer img {
+    margin-left: -10px;
+  }
+  #pastMissionContainer #upcomingMission #blockOne #mainStats {
+    width: auto;
+    margin-right: 35px;
+    margin-left: 45px;
+  }
+  #pastMissionContainer #upcomingMission #blockOne #mainStats .statFigure {
+    font-size: 14pt;
   }
 }
 /*# sourceMappingURL=App.css.map */
