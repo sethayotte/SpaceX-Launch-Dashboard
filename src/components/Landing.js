@@ -11,7 +11,7 @@ const Landing = () => {
         <h1 id="landingSubheading">Launch Schedule</h1>
       </div>
       <div>
-        <a href="/launch-dashboard">
+        <a href="/#/launch-dashboard">
           <IoArrowForwardCircleOutline id="startArrow" />
         </a>
       </div>
