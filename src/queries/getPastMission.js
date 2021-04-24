@@ -6,6 +6,7 @@ export const GET_PAST_MISSION = gql`
       id
       date_local
       details
+      image
       launchpad
       location {
         full_name
@@ -18,8 +19,8 @@ export const GET_PAST_MISSION = gql`
         id
         name
       }
+      image
       webcast
-      patch
     }
   }
 `;

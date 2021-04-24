@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useQuery } from "@apollo/react-hooks";
 import { GET_PAST_MISSION } from "../queries/getPastMission";
 
 import SpaceXLogo from "../assets/spacex.svg";
-import MissionImgPlaceholder from "../assets/960x0.jpeg";
+// import MissionImgPlaceholder from "../assets/960x0.jpeg";
 import { RiCloseCircleFill } from "react-icons/ri";
 import { SolarSystemLoading } from "react-loadingg";
 
@@ -44,7 +44,7 @@ const LaunchDashboard = () => {
           <div id="blockOne">
             <div id="imageContainer">
               <img
-                src={MissionImgPlaceholder}
+                src={data.mission.image}
                 id="missionImage"
                 alt="Falcon 9 launch"
               />
@@ -69,7 +69,7 @@ const LaunchDashboard = () => {
               <p className="detailsBody">{data.mission.details}</p>
             </div>
             <div id="buttonContainer">
-              <a href={data.mission.webcast} target="_blank" id="webcastLink">
+              <a href={data.mission.webcast} target="_blank" rel="noreferrer" id="webcastLink">
                 <div id="watchLiveButton">
                   <p>WATCH LIVE</p>
                 </div>

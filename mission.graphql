@@ -1,5 +1,6 @@
 type Mission {
   id: ID!
+  image: String!
   webcast: String
   original: String
   rocket: ID!
@@ -28,21 +29,28 @@ type Query {
   getImage(id: String!): [Image]
     @rest(
       endpoint: "https://api.spacexdata.com/v4/launches/$id;?limit=1"
-      setters: [{ field: "image", path: "links.flickr.original[]" }]
+      #setters: [{ field: "image", path: "links.flickr.original[]" }]
     )
   mission(id: String!): Mission
     @rest(
       endpoint: "https://api.spacexdata.com/v4/launches/$id;?limit=1"
-      setters: [{ field: "webcast", path: "links.webcast" }]
+      setters: [
+        { field: "webcast", path: "links.webcast" }
+        { field: "image", path: "links.flickr.original[]" }
+      ]
     )
   next: [Mission]
     @rest(
       endpoint: "https://api.spacexdata.com/v4/launches/next"
-      setters: [{ field: "webcast", path: "links.webcast" }]
+      setters: [
+        { field: "webcast", path: "links.webcast" }
+        # { field: "image", path: "links.flickr.original[]" }
+      ]
     )
   past: [Mission]
     @rest(
       endpoint: "https://api.spacexdata.com/v4/launches/past"
+      # setters: [{ field: "image", path: "links.flickr.original[]" }]
       configuration: "launchcode"
     )
 }
