@@ -72,9 +72,15 @@ const LaunchDashboard = () => {
               <p className="detailsBody">{data.next[0].details}</p>
             </div>
             <div id="buttonContainer">
-              <div id="watchLiveButton">
-                <p>WATCH LIVE</p>
-              </div>
+              <a
+                href="https://www.youtube.com/user/spacexchannel"
+                target="_blank"
+                id="webcastLink"
+              >
+                <div id="watchLiveButton">
+                  <p>WATCH LIVE</p>
+                </div>
+              </a>
             </div>
           </div>
         </div>

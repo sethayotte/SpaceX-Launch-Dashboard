@@ -282,6 +282,10 @@ pre {
   margin-top: 50px;
 }
 
+#missionContainers #upcomingMission #blockTwo #buttonContainer #webcastLink {
+  text-decoration: none;
+}
+
 #missionContainers #upcomingMission #blockTwo #buttonContainer #watchLiveButton {
   border-radius: 10px;
   background-color: #232323;
