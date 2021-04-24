@@ -11,9 +11,9 @@ import { PanelData } from "./PastListItems";
 const LaunchDashboard = () => {
   const { data, loading, error } = useQuery(GET_LAUNCH_DATA);
 
-  useEffect(() => {
-    console.log(data);
-  }, [data]);
+  //   useEffect(() => {
+  //     console.log(data);
+  //   }, [data]);
 
   if (loading) return <SolarSystemLoading color="#ffffff" speed={1.5} />;
   if (error) return <p>{error.message}</p>;
