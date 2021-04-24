@@ -9,7 +9,7 @@ const Landing = () => {
     <div id="landingPage">
       <div id="title">
         <img src={spaceXLogo} id="landingLogo" alt="SpaceX Logo" />
-        <h1 id="landingSubheading">Launch Schedule</h1>
+        <h1 id="landingSubheading">Launch Dashboard</h1>
       </div>
       <div>
         <Link to="/launch-dashboard">

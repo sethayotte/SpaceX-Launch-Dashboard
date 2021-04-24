@@ -30,7 +30,7 @@ const LaunchDashboard = () => {
         <div id="headerLeft">
           <Link to="/" id="homeLink">
             <img src={SpaceXLogo} alt="SpaceX Logo" />
-            <h3>Launch Schedule</h3>
+            <h3>Launch Dashboard</h3>
           </Link>
         </div>
         <div id="headerRight">
@@ -72,7 +72,7 @@ const LaunchDashboard = () => {
             <div id="buttonContainer">
               <a href={data.mission.webcast} target="_blank" id="webcastLink">
                 <div id="watchLiveButton">
-                  <p>WATCH LIVE</p>
+                  <p>WATCH REPLAY</p>
                 </div>
               </a>
             </div>
