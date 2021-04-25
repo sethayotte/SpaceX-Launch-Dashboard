@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { useQuery } from "@apollo/react-hooks";
 import { GET_PAST_MISSION } from "../queries/getPastMission";
@@ -27,15 +28,15 @@ const LaunchDashboard = () => {
     <div id="dashboardPage">
       <div id="header">
         <div id="headerLeft">
-          <a href="/" id="homeLink">
+          <Link to="/" id="homeLink">
             <img src={SpaceXLogo} alt="SpaceX Logo" />
-            <h3>Launch Schedule</h3>
-          </a>
+            <h3>Launch Dashboard</h3>
+          </Link>
         </div>
         <div id="headerRight">
-          <a href="/launch-dashboard">
+          <Link to="/launch-dashboard">
             <RiCloseCircleFill id="backToTitle" />
-          </a>
+          </Link>
         </div>
       </div>
       <div id="pastMissionContainer">
@@ -69,9 +70,14 @@ const LaunchDashboard = () => {
               <p className="detailsBody">{data.mission.details}</p>
             </div>
             <div id="buttonContainer">
-              <a href={data.mission.webcast} target="_blank" rel="noreferrer" id="webcastLink">
+              <a
+                href={data.mission.webcast}
+                target="_blank"
+                rel="noreferrer"
+                id="webcastLink"
+              >
                 <div id="watchLiveButton">
-                  <p>WATCH LIVE</p>
+                  <p>WATCH REPLAY</p>
                 </div>
               </a>
             </div>

@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 import { useQuery } from "@apollo/react-hooks";
 import { GET_LAUNCH_DATA } from "../queries/getLaunchData";
 
@@ -23,15 +24,15 @@ const LaunchDashboard = () => {
     <div id="dashboardPage">
       <div id="header">
         <div id="headerLeft">
-          <a href="/" id="homeLink">
+          <Link to="/" id="homeLink">
             <img src={SpaceXLogo} alt="SpaceX Logo" />
-            <h3>Launch Schedule</h3>
-          </a>
+            <h3>Launch Dashboard</h3>
+          </Link>
         </div>
         <div id="headerRight">
-          <a href="/">
+          <Link to="/">
             <RiArrowGoBackLine id="backToTitle" />
-          </a>
+          </Link>
         </div>
       </div>
       <div id="missionContainers">
@@ -43,7 +44,6 @@ const LaunchDashboard = () => {
         </div>
         <div id="upcomingMission">
           <h1>Upcoming_Mission</h1>
-          {/* <pre>{JSON.stringify(data, null, "  ")}</pre> */}
           <div id="blockOne">
             <div id="imageContainer">
               <img
@@ -72,9 +72,16 @@ const LaunchDashboard = () => {
               <p className="detailsBody">{data.next[0].details}</p>
             </div>
             <div id="buttonContainer">
-              <div id="watchLiveButton">
-                <p>WATCH LIVE</p>
-              </div>
+              <a
+                href="https://www.youtube.com/user/spacexchannel"
+                target="_blank"
+                rel="noreferrer"
+                id="webcastLink"
+              >
+                <div id="watchLiveButton">
+                  <p>WATCH LIVE</p>
+                </div>
+              </a>
             </div>
           </div>
         </div>
