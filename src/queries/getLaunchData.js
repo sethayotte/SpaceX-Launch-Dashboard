@@ -19,7 +19,6 @@ export const GET_LAUNCH_DATA = gql`
       details
       id
       webcast
-      patch
     }
     past {
       name
@@ -38,7 +37,6 @@ export const GET_LAUNCH_DATA = gql`
       details
       id
       webcast
-      patch
     }
   }
 `;
