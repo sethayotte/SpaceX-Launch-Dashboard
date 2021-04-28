@@ -25,7 +25,7 @@ pre {
 }
 
 #landingSubheading {
-  font-family: "IBM Plex Mono";
+  font-family: "IBM Plex Mono", monospace;
   font-weight: 400;
   font-size: 40pt;
   margin-top: 25px;
@@ -51,17 +51,24 @@ pre {
 
 @media only screen and (max-width: 700px) {
   #landingSubheading {
-    font-size: 24pt;
+    font-size: 20pt;
+    margin-top: 10px;
   }
 
   #title {
     margin-left: 25px;
     margin-right: 25px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
   }
 }
 
 //Landing Dashboard
+#dashboardPage {
+  margin: 0px;
+  padding: 0px;
+  width: 100vw;
+}
+
 #header {
   margin-top: 20px;
   margin-left: 45px;
@@ -73,7 +80,7 @@ pre {
     height: 40px;
   }
   h3 {
-    font-family: "IBM Plex Mono";
+    font-family: "IBM Plex Mono", monospace;
     font-weight: 400;
     font-size: 18pt;
     margin-top: 5px;
@@ -94,6 +101,7 @@ pre {
 #missionContainers {
   display: flex;
   margin: 35px;
+  align-items: flex-start;
 
   #pastMissions {
     background-color: #232323;
@@ -105,7 +113,7 @@ pre {
     overflow-x: hidden;
 
     h2 {
-      font-family: "IBM Plex Mono";
+      font-family: "IBM Plex Mono", monospace;
       font-weight: 500;
       text-align: center;
       margin-bottom: 35px;
@@ -122,14 +130,14 @@ pre {
 
       #listText {
         h2 {
-          font-family: "IBM Plex Mono";
+          font-family: "IBM Plex Mono", monospace;
           font-weight: 600;
           text-align: left;
           font-size: 16pt;
           margin: 0px 0px 0px 25px;
         }
         h3 {
-          font-family: "IBM Plex Mono";
+          font-family: "IBM Plex Mono", monospace;
           font-weight: 300;
           font-style: italic;
           text-align: left;
@@ -156,11 +164,12 @@ pre {
     border-radius: 20px;
     width: 60vw;
     max-width: 1000px;
-    height: 85vh;
+    height: auto;
     padding-right: 45px;
+    padding-bottom: 75px;
 
     h1 {
-      font-family: "IBM Plex Mono";
+      font-family: "IBM Plex Mono", monospace;
       font-weight: 500;
       padding-left: 55px;
       padding-top: 20px;
@@ -188,7 +197,7 @@ pre {
         margin-left: 25px;
 
         .statHeading {
-          font-family: "IBM Plex Mono";
+          font-family: "IBM Plex Mono", monospace;
           font-weight: 600;
           font-size: 12pt;
           color: #646363;
@@ -197,7 +206,7 @@ pre {
         }
 
         .statFigure {
-          font-family: "IBM Plex Mono";
+          font-family: "IBM Plex Mono", monospace;
           font-weight: 400;
           font-size: 18pt;
           color: white;
@@ -218,7 +227,7 @@ pre {
       flex-direction: column;
       align-items: center;
       .detailsHeading {
-        font-family: "IBM Plex Mono";
+        font-family: "IBM Plex Mono", monospace;
         font-weight: 600;
         font-size: 12pt;
         color: #646363;
@@ -227,7 +236,7 @@ pre {
       }
 
       .detailsBody {
-        font-family: "IBM Plex Mono";
+        font-family: "IBM Plex Mono", monospace;
         font-weight: 400;
         font-size: 12pt;
         color: white;
@@ -238,6 +247,10 @@ pre {
       #buttonContainer {
         margin-top: 50px;
 
+        #webcastLink {
+          text-decoration: none;
+        }
+
         #watchLiveButton {
           border-radius: 10px;
           background-color: #232323;
@@ -247,9 +260,10 @@ pre {
           align-items: center;
           justify-content: center;
           box-shadow: 0px 0px 0px 1px #fff inset;
+          transition: all 0.3s ease-in-out;
 
           p {
-            font-family: "IBM Plex Mono";
+            font-family: "IBM Plex Mono", monospace;
             font-weight: 500;
             font-size: 14pt;
           }
@@ -268,7 +282,7 @@ pre {
   }
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1200px) {
   #missionContainers {
     display: flex;
     flex-direction: column-reverse;
@@ -277,17 +291,22 @@ pre {
     #pastMissions {
       margin-top: 35px;
       margin-right: 0px;
-      width: 90vw;
-      max-width: 600px;
+      width: 75vw;
     }
 
     #upcomingMission {
       margin-top: 35px;
       margin-right: 0px;
       padding-bottom: 55px;
-      width: 80vw;
+      width: 70vw;
       height: auto;
-      max-width: 600px;
+
+      h1 {
+        font-size: 18pt;
+        text-align: center;
+        padding: 10px;
+      }
+
       #blockOne {
         display: flex;
         flex-direction: column;
@@ -316,6 +335,81 @@ pre {
   }
 }
 
+@media only screen and (max-width: 500px) {
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  #header {
+    img {
+      height: 28px;
+    }
+    h3 {
+      font-family: "IBM Plex Mono", monospace;
+      font-weight: 400;
+      font-size: 12pt;
+      margin-top: 5px;
+      margin-bottom: 0px;
+    }
+  }
+  #missionContainers,
+  #pastMissionContainer {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+
+    #pastMissions {
+      margin-top: 35px;
+      margin-right: 0px;
+      width: 95vw;
+    }
+
+    #upcomingMission {
+      margin-top: 15px;
+      margin-right: 0px;
+      padding-bottom: 55px;
+      width: 85vw;
+      height: auto;
+
+      h1 {
+        font-size: 18pt;
+        text-align: center;
+        padding: 10px;
+      }
+
+      #blockOne {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+
+        #imageContainer {
+          width: auto;
+          margin-bottom: 25px;
+          padding-left: 0px;
+        }
+
+        #mainStats {
+          width: auto;
+          margin-right: 35px;
+          margin-left: 45px;
+
+          .statFigure {
+            font-size: 14pt;
+          }
+        }
+      }
+
+      #blockTwo {
+        width: 80%;
+        margin-right: 35px;
+        margin-left: 45px;
+      }
+    }
+  }
+}
+
 // Past Mission Specific Modal
 #pastMissionContainer {
   display: flex;
@@ -331,7 +425,7 @@ pre {
     padding-right: 25px;
 
     h1 {
-      font-family: "IBM Plex Mono";
+      font-family: "IBM Plex Mono", monospace;
       font-weight: 500;
       padding-left: 55px;
       padding-top: 20px;
@@ -359,7 +453,7 @@ pre {
         margin-left: 25px;
 
         .statHeading {
-          font-family: "IBM Plex Mono";
+          font-family: "IBM Plex Mono", monospace;
           font-weight: 600;
           font-size: 12pt;
           color: #646363;
@@ -368,7 +462,7 @@ pre {
         }
 
         .statFigure {
-          font-family: "IBM Plex Mono";
+          font-family: "IBM Plex Mono", monospace;
           font-weight: 400;
           font-size: 18pt;
           color: white;
@@ -390,7 +484,7 @@ pre {
       flex-direction: column;
       align-items: center;
       .detailsHeading {
-        font-family: "IBM Plex Mono";
+        font-family: "IBM Plex Mono", monospace;
         font-weight: 600;
         font-size: 12pt;
         color: #646363;
@@ -399,7 +493,7 @@ pre {
       }
 
       .detailsBody {
-        font-family: "IBM Plex Mono";
+        font-family: "IBM Plex Mono", monospace;
         font-weight: 400;
         font-size: 12pt;
         color: white;
@@ -423,9 +517,10 @@ pre {
           align-items: center;
           justify-content: center;
           box-shadow: 0px 0px 0px 1px #fff inset;
+          transition: all 0.3s ease-in-out;
 
           p {
-            font-family: "IBM Plex Mono";
+            font-family: "IBM Plex Mono", monospace;
             font-weight: 500;
             font-size: 14pt;
           }
@@ -470,6 +565,29 @@ pre {
         width: 80%;
         margin-right: 35px;
         margin-left: 45px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  #pastMissionContainer {
+    #upcomingMission {
+      #blockOne {
+        #imageContainer {
+          img {
+            margin-left: -10px;
+          }
+        }
+        #mainStats {
+          width: auto;
+          margin-right: 35px;
+          margin-left: 45px;
+
+          .statFigure {
+            font-size: 14pt;
+          }
+        }
       }
     }
   }

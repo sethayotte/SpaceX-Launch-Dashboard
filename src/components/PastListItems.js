@@ -6,7 +6,6 @@ import { GET_LAUNCH_DATA } from "../queries/getLaunchData";
 import { RiArrowRightSLine } from "react-icons/ri";
 
 const PastListItems = ({ item }) => {
-  console.log("item", item);
   return (
     <div id="listItemContainer">
       <Link
@@ -32,10 +31,6 @@ const PanelData = () => {
   const { data, loading, error } = useQuery(GET_LAUNCH_DATA);
 
   const missions = data.past;
-
-  useEffect(() => {
-    console.log(data);
-  }, [data]);
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>{error.message}</p>;

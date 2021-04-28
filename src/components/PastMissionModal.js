@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 import React, { useEffect } from "react";
+=======
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+>>>>>>> 0c3c62a771104f2f5abddf1ca6534666ef335509
 import { useParams } from "react-router-dom";
 import { useQuery } from "@apollo/react-hooks";
 import { GET_PAST_MISSION } from "../queries/getPastMission";
@@ -15,9 +20,9 @@ const LaunchDashboard = () => {
     variables: { missionId },
   });
 
-  useEffect(() => {
-    console.log(data);
-  }, [data]);
+  //   useEffect(() => {
+  //     console.log(data);
+  //   }, [data]);
 
   if (loading) return <SolarSystemLoading color="#ffffff" speed={1.5} />;
   if (error) return <p>{error.message}</p>;
@@ -27,15 +32,15 @@ const LaunchDashboard = () => {
     <div id="dashboardPage">
       <div id="header">
         <div id="headerLeft">
-          <a href="/" id="homeLink">
+          <Link to="/" id="homeLink">
             <img src={SpaceXLogo} alt="SpaceX Logo" />
-            <h3>Launch Schedule</h3>
-          </a>
+            <h3>Launch Dashboard</h3>
+          </Link>
         </div>
         <div id="headerRight">
-          <a href="/launch-dashboard">
+          <Link to="/launch-dashboard">
             <RiCloseCircleFill id="backToTitle" />
-          </a>
+          </Link>
         </div>
       </div>
       <div id="pastMissionContainer">
@@ -71,7 +76,7 @@ const LaunchDashboard = () => {
             <div id="buttonContainer">
               <a href={data.mission.webcast} target="_blank" rel="noreferrer" id="webcastLink">
                 <div id="watchLiveButton">
-                  <p>WATCH LIVE</p>
+                  <p>WATCH REPLAY</p>
                 </div>
               </a>
             </div>

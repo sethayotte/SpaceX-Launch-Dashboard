@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 import React, { useEffect } from "react";
+=======
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+>>>>>>> 0c3c62a771104f2f5abddf1ca6534666ef335509
 import { useQuery } from "@apollo/react-hooks";
 import { GET_LAUNCH_DATA } from "../queries/getLaunchData";
 
@@ -11,9 +16,9 @@ import { PanelData } from "./PastListItems";
 const LaunchDashboard = () => {
   const { data, loading, error } = useQuery(GET_LAUNCH_DATA);
 
-  useEffect(() => {
-    console.log(data);
-  }, [data]);
+  //   useEffect(() => {
+  //     console.log(data);
+  //   }, [data]);
 
   if (loading) return <SolarSystemLoading color="#ffffff" speed={1.5} />;
   if (error) return <p>{error.message}</p>;
@@ -23,15 +28,15 @@ const LaunchDashboard = () => {
     <div id="dashboardPage">
       <div id="header">
         <div id="headerLeft">
-          <a href="/" id="homeLink">
+          <Link to="/" id="homeLink">
             <img src={SpaceXLogo} alt="SpaceX Logo" />
-            <h3>Launch Schedule</h3>
-          </a>
+            <h3>Launch Dashboard</h3>
+          </Link>
         </div>
         <div id="headerRight">
-          <a href="/">
+          <Link to="/">
             <RiArrowGoBackLine id="backToTitle" />
-          </a>
+          </Link>
         </div>
       </div>
       <div id="missionContainers">
@@ -43,7 +48,6 @@ const LaunchDashboard = () => {
         </div>
         <div id="upcomingMission">
           <h1>Upcoming_Mission</h1>
-          {/* <pre>{JSON.stringify(data, null, "  ")}</pre> */}
           <div id="blockOne">
             <div id="imageContainer">
               <img
@@ -72,9 +76,15 @@ const LaunchDashboard = () => {
               <p className="detailsBody">{data.next[0].details}</p>
             </div>
             <div id="buttonContainer">
-              <div id="watchLiveButton">
-                <p>WATCH LIVE</p>
-              </div>
+              <a
+                href="https://www.youtube.com/user/spacexchannel"
+                target="_blank"
+                id="webcastLink"
+              >
+                <div id="watchLiveButton">
+                  <p>WATCH LIVE</p>
+                </div>
+              </a>
             </div>
           </div>
         </div>

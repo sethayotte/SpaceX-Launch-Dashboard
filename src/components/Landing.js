@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import { IoArrowForwardCircleOutline } from "react-icons/io5";
 import spaceXLogo from "../assets/spacex.svg";
@@ -8,12 +9,12 @@ const Landing = () => {
     <div id="landingPage">
       <div id="title">
         <img src={spaceXLogo} id="landingLogo" alt="SpaceX Logo" />
-        <h1 id="landingSubheading">Launch Schedule</h1>
+        <h1 id="landingSubheading">Launch Dashboard</h1>
       </div>
       <div>
-        <a href="/launch-dashboard">
+        <Link to="/launch-dashboard">
           <IoArrowForwardCircleOutline id="startArrow" />
-        </a>
+        </Link>
       </div>
     </div>
   );
